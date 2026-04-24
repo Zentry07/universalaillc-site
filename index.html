@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Universal AI LLC — Korean-first AI apps</title>
+  <meta name="description" content="Universal AI LLC builds focused, AI-powered consumer iOS apps. Makers of Cooked, Banchan, and Jineo." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Universal AI LLC — Korean-first AI apps" />
+  <meta property="og:description" content="Cooked · Banchan · Jineo. iOS apps from Universal AI LLC." />
+  <meta property="og:url" content="https://universalaillc.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Apple-friendly favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23E08B79'/><text x='50' y='62' font-family='-apple-system, BlinkMacSystemFont, sans-serif' font-size='44' font-weight='800' text-anchor='middle' fill='white'>U</text></svg>" />
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+      background: #FAF7F2;
+      color: #1A1715;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 48px 28px 80px;
+    }
+
+    /* Header */
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 64px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -0.4px;
+      font-size: 18px;
+    }
+    .logo-mark {
+      width: 36px; height: 36px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #E08B79, #C46A56);
+      color: white;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 900; font-size: 18px;
+    }
+    .top-meta {
+      font-size: 12px;
+      color: #6E635D;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    /* Hero */
+    .hero { margin-bottom: 80px; }
+    .kicker {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #C46A56;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: clamp(44px, 7vw, 76px);
+      line-height: 1.04;
+      letter-spacing: -2.2px;
+      font-weight: 900;
+      margin-bottom: 20px;
+    }
+    h1 em {
+      font-style: italic;
+      color: #C46A56;
+      font-weight: 900;
+    }
+    .lede {
+      font-size: 18px;
+      max-width: 620px;
+      color: #4A413D;
+      line-height: 1.6;
+    }
+
+    /* Apps grid */
+    .apps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin-bottom: 80px;
+    }
+    .app-card {
+      background: white;
+      border-radius: 18px;
+      padding: 26px 24px;
+      border: 1px solid #EBE3DA;
+      box-shadow: 0 1px 0 rgba(26,23,21,0.04), 0 8px 24px -8px rgba(26,23,21,0.06);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .app-card .app-tag {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      color: #6E635D;
+    }
+    .app-card h2 {
+      font-size: 22px;
+      letter-spacing: -0.6px;
+      font-weight: 800;
+    }
+    .app-card .app-korean {
+      font-size: 13px;
+      color: #6E635D;
+      font-weight: 600;
+      margin-top: -4px;
+    }
+    .app-card p {
+      font-size: 14px;
+      color: #4A413D;
+      line-height: 1.55;
+      margin-top: 4px;
+    }
+    .app-card a {
+      margin-top: 12px;
+      align-self: flex-start;
+      font-size: 13px;
+      font-weight: 800;
+      color: #1A1715;
+      text-decoration: none;
+      letter-spacing: -0.2px;
+      border-bottom: 2px solid #1A1715;
+      padding-bottom: 1px;
+    }
+
+    /* About */
+    .about {
+      background: white;
+      border-radius: 22px;
+      padding: 40px 36px;
+      margin-bottom: 56px;
+      border: 1px solid #EBE3DA;
+    }
+    .about h3 {
+      font-size: 14px;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      color: #C46A56;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+    .about p {
+      font-size: 16px;
+      max-width: 680px;
+      color: #2C2724;
+      line-height: 1.7;
+    }
+    .about p + p { margin-top: 14px; }
+
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-bottom: 56px;
+    }
+    .contact-cell {
+      padding: 18px 0;
+    }
+    .contact-cell .label {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: #6E635D;
+      margin-bottom: 6px;
+    }
+    .contact-cell .value {
+      font-size: 16px;
+      font-weight: 600;
+      color: #1A1715;
+    }
+    .contact-cell .value a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 2px solid rgba(26,23,21,0.18);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid #EBE3DA;
+      padding-top: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 12px;
+      color: #6E635D;
+    }
+    footer a {
+      color: #6E635D;
+      text-decoration: none;
+      margin-left: 12px;
+    }
+    footer a:hover { color: #1A1715; }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header class="topbar">
+      <div class="logo">
+        <div class="logo-mark">U</div>
+        Universal AI LLC
+      </div>
+      <div class="top-meta">EST. 2026 · MARYLAND</div>
+    </header>
+
+    <section class="hero">
+      <div class="kicker">CONSUMER iOS · AI · KOREAN-FIRST</div>
+      <h1>We build focused AI apps<br/>that <em>actually ship.</em></h1>
+      <p class="lede">
+        Universal AI LLC is an independent app studio out of Maryland.
+        We build single-purpose iOS apps powered by frontier AI &mdash;
+        each one solving a real problem fast, with native polish and
+        Korean-cultural depth where it matters.
+      </p>
+    </section>
+
+    <section class="apps" aria-label="Our apps">
+
+      <article class="app-card">
+        <span class="app-tag">DATING</span>
+        <h2>Cooked</h2>
+        <span class="app-korean">Dating Wingman AI</span>
+        <p>Decode her texts. Land dates. AI texting + IRL practice with voice. For Gen Z guys who refuse to stay cooked.</p>
+        <a href="https://apps.apple.com/app/id6760084466" target="_blank" rel="noopener">Download on App Store →</a>
+      </article>
+
+      <article class="app-card">
+        <span class="app-tag">FOOD</span>
+        <h2>Banchan</h2>
+        <span class="app-korean">반찬 · Cook Korean Food</span>
+        <p>Chef Minji teaches you Korean cooking step-by-step. 28+ recipes, 170+ restaurants, and a scanner that decodes any Korean menu.</p>
+        <a href="https://apps.apple.com/app/id6762143968" target="_blank" rel="noopener">Download on App Store →</a>
+      </article>
+
+      <article class="app-card">
+        <span class="app-tag">SKINCARE</span>
+        <h2>Jineo</h2>
+        <span class="app-korean">지뇨 · Korean Skin Scan</span>
+        <p>10-second selfie scan that returns your 12-tone Korean personal color, Glass Skin Index, and a personalized AM/PM K-beauty routine.</p>
+        <a href="https://apps.apple.com/app/id6762692530" target="_blank" rel="noopener">Download on App Store →</a>
+      </article>
+
+    </section>
+
+    <section class="about">
+      <h3>About</h3>
+      <p>
+        Universal AI LLC was founded in 2026 by Aiden Price as a single-member
+        Maryland LLC. We ship consumer iOS apps that pair frontier AI models
+        (OpenAI, Anthropic) with deep Korean-cultural domain knowledge &mdash;
+        K-beauty, K-food, and Gen Z relationship dynamics.
+      </p>
+      <p>
+        Every app is built lean, ships fast, and runs on a Supabase backend
+        with strict user privacy: scans and chats are processed inline and
+        not stored on our servers. We charge for our apps because we don't
+        sell your data.
+      </p>
+    </section>
+
+    <section class="contact-grid">
+      <div class="contact-cell">
+        <div class="label">Email</div>
+        <div class="value"><a href="mailto:contact@universalaillc.com">contact@universalaillc.com</a></div>
+      </div>
+      <div class="contact-cell">
+        <div class="label">Location</div>
+        <div class="value">Maryland, USA</div>
+      </div>
+      <div class="contact-cell">
+        <div class="label">Founded</div>
+        <div class="value">February 2026</div>
+      </div>
+      <div class="contact-cell">
+        <div class="label">Apple Developer</div>
+        <div class="value">Team NMND2RQBF3</div>
+      </div>
+    </section>
+
+    <footer>
+      <div>© 2026 Universal AI LLC · All rights reserved</div>
+      <div>
+        <a href="mailto:contact@universalaillc.com">Support</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
