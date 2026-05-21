@@ -91,6 +91,48 @@
     VDP era will be invited first.
   </p>
 
+  <h2>Your right to delete your data</h2>
+  <p>
+    Per <strong>GDPR Article 17</strong> and <strong>CCPA §1798.105</strong>, you can
+    permanently delete your Jineo account and all associated data at any time:
+  </p>
+  <ul>
+    <li><strong>In-app</strong> — Profile → Privacy → Delete account (one-tap, immediate)</li>
+    <li><strong>By email</strong> — <a href="mailto:security@universalaillc.com">security@universalaillc.com</a> (we respond within 48 hours, complete within 30 days)</li>
+  </ul>
+  <p>
+    Once deletion is initiated, the following happens automatically:
+  </p>
+  <ul>
+    <li><strong>Immediate</strong> — All app data (scans, routines, social graph, email subscription, Pro/Studio entitlements) is permanently deleted from our active database</li>
+    <li><strong>Within 30 days</strong> — All Supabase backups containing your data are purged through normal retention rotation</li>
+    <li><strong>Apple-managed</strong> — Your subscription billing history is managed by Apple Inc. and is not in our control; manage it at <em>Settings → Apple ID → Subscriptions</em> on your device</li>
+    <li><strong>Anonymized usage logs</strong> — Aggregate analytics (PostHog events without your user_id) may persist indefinitely but cannot be linked back to you</li>
+  </ul>
+
+  <h2>Subprocessors</h2>
+  <p>
+    Vendors that process Jineo user data on our behalf, with whom we have
+    signed Data Processing Agreements (DPAs) per GDPR Article 28:
+  </p>
+  <ul>
+    <li><strong>Supabase</strong> (storage, auth, edge functions — US-east region)</li>
+    <li><strong>OpenAI</strong> (skin analysis — zero retention per their API policy)</li>
+    <li><strong>RevenueCat</strong> (subscription billing)</li>
+    <li><strong>ElevenLabs</strong> (Hana voice synthesis)</li>
+    <li><strong>Sentry</strong> (crash reporting — PIPA-gated, opt-out available)</li>
+    <li><strong>PostHog</strong> (product analytics — anonymized when feasible)</li>
+    <li><strong>Resend</strong> (transactional email)</li>
+    <li><strong>Google Workspace</strong> (security@ inbox routing)</li>
+    <li><strong>Apple Inc.</strong> (App Store distribution + subscription billing)</li>
+    <li><strong>GitHub</strong> (code hosting + security advisories)</li>
+  </ul>
+  <p>
+    All US-based subprocessors operate under EU Standard Contractual Clauses
+    (SCCs). We update this list within 30 days of any change. See our
+    <a href="/privacy">privacy policy</a> for full details on data handling.
+  </p>
+
   <h2>Safe harbor</h2>
   <p>
     We consider security research conducted under this policy to be
