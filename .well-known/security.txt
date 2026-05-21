@@ -1,0 +1,7 @@
+Contact: mailto:security@universalaillc.com
+Contact: https://github.com/Zentry07/jineo-app-expo/security/advisories/new
+Expires: 2027-05-21T00:00:00.000Z
+Preferred-Languages: en, ko
+Canonical: https://universalaillc.com/.well-known/security.txt
+Policy: https://universalaillc.com/security-policy
+Acknowledgments: https://universalaillc.com/security-acknowledgments

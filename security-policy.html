@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Security Policy · Universal AI LLC</title>
+  <meta name="description" content="Vulnerability disclosure policy for Universal AI LLC and Jineo." />
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      max-width: 720px;
+      margin: 40px auto;
+      padding: 0 24px;
+      color: #1A1715;
+      background: #FAF7F2;
+      line-height: 1.55;
+    }
+    h1 { font-size: 28px; margin-bottom: 4px; }
+    h2 { font-size: 18px; margin-top: 32px; color: #B85C7A; }
+    .meta { color: #6B5F58; font-size: 13px; margin-bottom: 24px; }
+    code { background: #F2ECE1; padding: 2px 6px; border-radius: 4px; font-size: 13px; }
+    ul { padding-left: 22px; }
+    li { margin-bottom: 6px; }
+    a { color: #B85C7A; text-decoration: underline; }
+    .scope-box { border-left: 4px solid #A8C4A2; background: #D8E5D3; padding: 12px 16px; border-radius: 4px; margin: 12px 0; }
+    .out-of-scope { border-left: 4px solid #B85C7A; background: #F5E1D8; padding: 12px 16px; border-radius: 4px; margin: 12px 0; }
+    footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid #E0D4C5; color: #6B5F58; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <h1>Security Policy</h1>
+  <p class="meta">Universal AI LLC · Last reviewed: 2026-05-21 · Refresh quarterly</p>
+
+  <p>
+    Universal AI LLC (the company behind <a href="/">Jineo</a>) welcomes
+    security researchers who help us protect our users. This page
+    documents what's in scope for disclosure, how to report a finding,
+    and what response timelines you can expect from us.
+  </p>
+
+  <h2>How to report</h2>
+  <ul>
+    <li>Email <a href="mailto:security@universalaillc.com">security@universalaillc.com</a> with a clear write-up.</li>
+    <li>Or open a private security advisory at
+        <a href="https://github.com/Zentry07/jineo-app-expo/security/advisories/new">GitHub Security Advisories</a>.
+    </li>
+    <li>Preferred languages: English, Korean (한국어).</li>
+    <li>Please give us 90 days to investigate and fix before any public disclosure.</li>
+  </ul>
+
+  <h2>What we commit to</h2>
+  <ul>
+    <li>Acknowledge your report within <strong>24 hours</strong> (business hours, US Eastern).</li>
+    <li>Triage and confirm severity within <strong>7 days</strong>.</li>
+    <li>Fix or mitigate any confirmed vulnerability within <strong>90 days</strong> of triage, or sooner if severity warrants.</li>
+    <li>Credit you on our <a href="/security-acknowledgments">researcher acknowledgments page</a> unless you prefer anonymity.</li>
+    <li>Not take legal action against good-faith research that follows this policy.</li>
+  </ul>
+
+  <h2>In scope</h2>
+  <div class="scope-box">
+    <ul>
+      <li>The <strong>Jineo iOS app</strong> (bundle ID <code>com.universalai.jineo</code>) — current App Store version and the latest TestFlight build.</li>
+      <li>The <strong>Universal AI LLC website</strong> at <a href="/">universalaillc.com</a>.</li>
+      <li>The Jineo <strong>Supabase backend</strong> at project <code>eelywdeipkraxgxtpfry</code>, including all edge functions under <code>https://eelywdeipkraxgxtpfry.supabase.co/functions/v1/</code>.</li>
+      <li>The Jineo OTA bundle on EAS Updates.</li>
+    </ul>
+  </div>
+
+  <h2>Out of scope</h2>
+  <div class="out-of-scope">
+    <ul>
+      <li>Findings that require a jailbroken iPhone, an attacker with physical access, or installation of a custom root CA.</li>
+      <li>Social engineering of Universal AI employees, contractors, family, or customers.</li>
+      <li>Denial-of-service attacks (rate limiting and DDoS testing).</li>
+      <li>Spam, phishing, or content-moderation failures (use the in-app report flow for content concerns).</li>
+      <li>Self-XSS, missing security headers without demonstrated impact, or missing rate limits on endpoints that already enforce them server-side.</li>
+      <li>Vulnerabilities in third-party services we use (Supabase, RevenueCat, OpenAI, ElevenLabs, PostHog, Sentry, Resend) — please report those to the vendor.</li>
+      <li>Findings already disclosed publicly elsewhere.</li>
+      <li>Outdated dependency versions without a working PoC against our deployment.</li>
+    </ul>
+  </div>
+
+  <h2>What to expect from us</h2>
+  <p>
+    We do not currently run a paid bug bounty. This is a
+    <strong>Vulnerability Disclosure Policy (VDP)</strong> — we'll
+    acknowledge your report, credit you, and fix the issue, but we do not
+    pay monetary rewards yet. Once Jineo crosses 1M monthly active users,
+    we plan to open a paid program on HackerOne; researchers from our
+    VDP era will be invited first.
+  </p>
+
+  <h2>Safe harbor</h2>
+  <p>
+    We consider security research conducted under this policy to be
+    authorized, conducted in good faith, and exempt from claims under
+    the Computer Fraud and Abuse Act (CFAA), the Digital Millennium
+    Copyright Act (DMCA), and Apple's Developer Program License Agreement.
+    We will not initiate legal action against researchers acting in good
+    faith.
+  </p>
+
+  <footer>
+    Questions about this policy? Email
+    <a href="mailto:security@universalaillc.com">security@universalaillc.com</a>.
+    Policy version 1.0 · Effective 2026-05-21.
+  </footer>
+</body>
+</html>
