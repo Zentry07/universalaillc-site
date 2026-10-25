@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Universal AI LLC — Korean-first AI apps</title>
+  <title>Universal AI LLC — Focused AI apps for iPhone</title>
   <link rel="canonical" href="https://universalaillc.com/" />
-  <meta name="description" content="Universal AI LLC builds focused, AI-powered consumer iOS apps. Makers of Jineo (Korean skin scan) and Delty (private GLP-1 routine record), plus Cooked and Banchan." />
+  <meta name="description" content="Universal AI LLC is a Maryland app studio making focused, AI-powered iPhone apps: Jineo (Korean skincare), Delty (private GLP-1 routine record), DealPilot (used-car deal check) and BatchShoot (batch product-video editing)." />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Universal AI LLC — Korean-first AI apps" />
-  <meta property="og:description" content="Jineo · Delty · Cooked · Banchan. Focused iOS apps from Universal AI LLC, Maryland." />
+  <meta property="og:title" content="Universal AI LLC — Focused AI apps for iPhone" />
+  <meta property="og:description" content="Jineo · Delty · DealPilot · BatchShoot. Focused iPhone apps from Universal AI LLC, Maryland." />
   <meta property="og:image" content="https://universalaillc.com/assets/og.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -102,7 +102,7 @@
     /* Apps grid */
     .apps {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 18px;
       margin-bottom: 80px;
     }
@@ -116,6 +116,22 @@
       flex-direction: column;
       gap: 10px;
     }
+    @media (max-width: 640px) { .apps { grid-template-columns: 1fr; } }
+    .app-head { display: flex; align-items: center; gap: 14px; margin-bottom: 4px; }
+    .app-icon {
+      width: 56px; height: 56px; border-radius: 13px; flex: none;
+      box-shadow: 0 0 0 1px rgba(26,23,21,0.06), 0 6px 16px -6px rgba(26,23,21,0.25);
+    }
+    .app-head h2 { line-height: 1.1; }
+    .status {
+      align-self: flex-start;
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.2px;
+      color: #4A413D; background: #F5EFE8; border-radius: 999px; padding: 4px 10px;
+    }
+    .status::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #3F8F5F; }
+    .status.soon::before { background: #C9922E; }
+    .app-card p { flex: 1; }
     .app-card .app-tag {
       font-size: 10px;
       font-weight: 800;
@@ -238,7 +254,7 @@
     "founder": { "@type": "Person", "name": "Aiden Price" },
     "foundingDate": "2026-02",
     "address": { "@type": "PostalAddress", "addressRegion": "MD", "addressCountry": "US" },
-    "sameAs": ["https://www.linkedin.com/company/universalaillc", "https://jineo.app/", "https://delty.app/"]
+    "sameAs": ["https://www.linkedin.com/company/universalaillc", "https://jineo.app/", "https://delty.app/", "https://universalai123.github.io/dealpilot-web/", "https://universalai123.github.io/batchshoot-web/"]
   }
   </script>
 </head>
@@ -255,48 +271,72 @@
 
     <main>
     <section class="hero">
-      <div class="kicker">CONSUMER iOS · AI · KOREAN-FIRST</div>
+      <div class="kicker">INDEPENDENT APP STUDIO · iPHONE · AI</div>
       <h1>We build focused AI apps<br/>that <em>actually ship.</em></h1>
       <p class="lede">
         Universal AI LLC is an independent app studio out of Maryland.
-        We build single-purpose iOS apps powered by frontier AI &mdash;
+        We build single-purpose iPhone apps powered by frontier AI &mdash;
         each one solving a real problem fast, with native polish and
-        Korean-cultural depth where it matters.
+        nothing on the label we can&rsquo;t show you.
       </p>
     </section>
 
     <section class="apps" aria-label="Our apps">
 
       <article class="app-card">
-        <span class="app-tag">DATING</span>
-        <h2>Cooked</h2>
-        <span class="app-korean">Dating Wingman AI</span>
-        <p>Become the guy she chases. Decode her texts. Save the convo. Land the date — then practice IRL with voice-AI personas before it happens.</p>
-        <a href="/cooked.html">Learn more →</a>
-      </article>
-
-      <article class="app-card">
-        <span class="app-tag">FOOD</span>
-        <h2>Banchan</h2>
-        <span class="app-korean">반찬 · Korean Food Companion</span>
-        <p>Korean food, decoded. Find 170+ Korean restaurants in America, cook 33 authentic recipes halmeoni's way, and scan any Hangul menu in a tap.</p>
-        <a href="/banchan.html">Learn more →</a>
-      </article>
-
-      <article class="app-card">
-        <span class="app-tag">SKINCARE</span>
-        <h2>Jineo</h2>
-        <span class="app-korean">지뇨 · Korean Skin Science</span>
-        <p>Korean skincare, decoded. A 10-second skin scan, honest 0–100 scores for real Korean products, an ingredient scanner for any label. No paid rankings. Live on the App Store.</p>
+        <div class="app-head">
+          <img class="app-icon" src="/assets/apps/jineo.webp" width="56" height="56" alt="" loading="lazy" />
+          <div>
+            <span class="app-tag">Skincare</span>
+            <h2>Jineo</h2>
+          </div>
+        </div>
+        <span class="app-korean">진어 · Korean skincare, decoded</span>
+        <p>Scan your skin and the products you already own, and Jineo builds an AM/PM routine around them, with a Korean swap for anything that fights your skin. Real Korean brands. No paid rankings.</p>
+        <span class="status">On the App Store</span>
         <a href="https://jineo.app">jineo.app →</a>
       </article>
 
       <article class="app-card">
-        <span class="app-tag">HEALTH</span>
-        <h2>Delty</h2>
+        <div class="app-head">
+          <img class="app-icon" src="/assets/apps/delty.webp" width="56" height="56" alt="" loading="lazy" />
+          <div>
+            <span class="app-tag">Health record</span>
+            <h2>Delty</h2>
+          </div>
+        </div>
         <span class="app-korean">Your routine, on the record</span>
         <p>A private daily record for people on a GLP-1 or peptide routine: doses, check-ins and measurements, a one-page visit summary, photos when you want them. Nothing leaves your iPhone. Not a medical device.</p>
+        <span class="status soon">Coming to the App Store</span>
         <a href="https://delty.app">delty.app →</a>
+      </article>
+
+      <article class="app-card">
+        <div class="app-head">
+          <img class="app-icon" src="/assets/apps/dealpilot.webp" width="56" height="56" alt="" loading="lazy" />
+          <div>
+            <span class="app-tag">Cars</span>
+            <h2>DealPilot</h2>
+          </div>
+        </div>
+        <span class="app-korean">Check the deal before you buy</span>
+        <p>Your max bid with auction fees, the all-in cost and NHTSA recalls for a used car, before you raise your hand. A cost you don&rsquo;t know stays Unknown, never $0. No account needed.</p>
+        <span class="status">Free on the web · iPhone in beta</span>
+        <a href="https://universalai123.github.io/dealpilot-web/">Try DealPilot →</a>
+      </article>
+
+      <article class="app-card">
+        <div class="app-head">
+          <img class="app-icon" src="/assets/apps/batchshoot.webp" width="56" height="56" alt="" loading="lazy" />
+          <div>
+            <span class="app-tag">Product video</span>
+            <h2>BatchShoot</h2>
+          </div>
+        </div>
+        <span class="app-korean">Film 20 takes. Get 20 edits.</span>
+        <p>Add up to 20 product recordings and BatchShoot cuts and captions each one on your iPhone. Every cut is explained, Undo is one tap, and nothing uploads.</p>
+        <span class="status soon">iPhone beta</span>
+        <a href="https://universalai123.github.io/batchshoot-web/">See BatchShoot →</a>
       </article>
 
     </section>
@@ -305,16 +345,16 @@
       <h3>About</h3>
       <p>
         Universal AI LLC was founded in 2026 by Aiden Price as a single-member
-        Maryland LLC. We ship consumer iOS apps that pair frontier AI models
-        with deep domain knowledge &mdash; Korean skincare, GLP-1 and peptide
-        routines, Korean food, and Gen Z relationship dynamics.
+        Maryland LLC. We ship iPhone apps that pair frontier AI models with
+        deep domain knowledge &mdash; Korean skincare, GLP-1 and peptide
+        routines, used-car deals, and product video.
       </p>
       <p>
-        Every app is built lean, ships fast, and runs on a Supabase backend
-        with strict user privacy: scans and chats are processed inline and
-        not stored on our servers, and Delty keeps its record on the phone
-        entirely. One rule runs through every app: never claim what we
-        cannot show. We charge for our apps because we don't sell your data.
+        Every app is built lean and private by default: Jineo reads your selfie
+        without storing it on our servers, and Delty, DealPilot and BatchShoot
+        keep your records on your device. One rule runs through every app:
+        never claim what we cannot show. We charge for our apps because we
+        don't sell your data.
       </p>
     </section>
 
